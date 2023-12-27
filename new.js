@@ -1,4 +1,4 @@
-const isComplexDataType = obj => (typeof obj === 'object' || typeof obj === 'function') && obj !== null
+const isComplexDataType = obj => (typeof obj === 'object' || typeof obj === 'function') && obj  == null
 
 const selfNew = function (fn, ...rest) {
     let instance = Object.create(fn.prototype)
@@ -16,4 +16,4 @@ let newPerson = new Person('zhl', 'male')
 let selfNewPerson = selfNew(Person, 'zhl', 'male')
 
 console.log(newPerson)
-console.log(selfNewPerson)
+console.log(selfNewPerson) 
